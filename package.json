@@ -1,0 +1,57 @@
+{
+  "name": "expess-fizzbuzz-api",
+  "version": "0.0.0",
+  "private": true,
+  "author": {
+    "name": "Vinay Pandya",
+    "url": "https://www.linkedin.com/in/imvinaypandya/"
+  },
+  "scripts": {
+    "start": "run-s start:dev",
+    "start:prod": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www",
+    "jest:watch": "NODE_ENV=test jest --silent --watch --verbose __tests__/",
+    "test": "run-s test:*",
+    "test:int": "NODE_ENV=test jest --silent --verbose --forceExit  __tests__/",
+    "test:unit": "NODE_ENV=test jest --silent --verbose --forceExit  __spec__/",
+    "test:prettier": "prettier '**/*.js' --check",
+    "format": "prettier-eslint --eslint-config-path ./.eslintrc --write  $PWD/'**/*.+(js|json)'",
+    "lint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "@jest/globals": "^26.6.2",
+    "compression": "^1.7.4",
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "~4.16.1",
+    "express-promise-router": "^4.0.1",
+    "helmet": "^4.4.1",
+    "http-errors": "^1.8.0",
+    "morgan": "~1.9.1",
+    "request-ip": "^2.1.3",
+    "supertest": "^6.1.3",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.3",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  }
+}
